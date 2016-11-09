@@ -1,0 +1,22 @@
+
+newring test 16384 scratchpad=256
+
+loadrt ringwrite ring=test
+
+# slow square signal on ringwrite.write
+# every edge on ringwrite.write causes a message to be queued
+loadrt charge_pump
+net square-wave charge-pump.out ringwrite.write
+
+# 1ms/200ms
+newthread  fast 1000000
+newthread  slow 200000000
+
+# the 'enqueue a message' function
+addf ringwrite fast
+
+addf charge-pump slow
+start
+
+# get going
+setp charge-pump.enable 1
