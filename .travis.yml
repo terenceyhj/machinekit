@@ -18,6 +18,10 @@ services:
 
 before_install:
   - chmod +x .travis/check_sftp.sh 
+  - chmod +x .travis/docker_run.sh
+  - chmod +x .travis/send_binaries.sh
+  - chmod +x .travis/upload_packagecloud.sh
+  - chmod +x .travis/send_status.sh
   - sudo apt-get update -qq
   - sudo apt-get install -qq sshpass
   - gem install package_cloud
