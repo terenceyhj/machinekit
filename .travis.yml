@@ -17,18 +17,7 @@ services:
   - docker
 
 before_install:
-  - chmod +x .travis/check_sftp.sh 
-  - chmod +x .travis/docker_run.sh
-  - chmod +x .travis/send_binaries.sh
-  - chmod +x .travis/upload_packagecloud.sh
-  - chmod +x .travis/send_status.sh
-  - chmod +x .travis/build_deb.sh
-  - chmod +x .travis/build_rip.sh
-  - chmod +x .travis/build_rip_helper.sh
-  - chmod +x .travis/get_ccache.sh
-  - chmod +x .travis/save_ccache.sh
-  - chmod +x .travis/mk_runtests/run_tests.sh
-  - chmod +x .travis/mk_runtests/run_tests_helper.sh
+  - chmod +x ./
   - sudo apt-get update -qq
   - sudo apt-get install -qq sshpass
   - gem install package_cloud
