@@ -17,17 +17,17 @@ services:
   - docker
 
 before_install:
-  - chmod +x .travis/build_deb
-  - chmod +x .travis/build_rip
-  - chmod +x .travis/build_rip_helper
-  - chmod +x .travis/check_sftp
-  - chmod +x .travis/docker_run
-  - chmod +x .travis/get_ccache
-  - chmod +x .travis/save_ccache
-  - chmod +x .travis/send_binaries
-  - chmod +x .travis/send_status
-  - chmod +x .travis/upload_packagecloud
-  - chmod +x ./debian/configure
+  - chmod +x .travis/build_deb.sh
+  - chmod +x .travis/build_rip.sh
+  - chmod +x .travis/build_rip_helper.sh
+  - chmod +x .travis/check_sftp.sh
+  - chmod +x .travis/docker_run.sh
+  - chmod +x .travis/get_ccache.sh
+  - chmod +x .travis/save_ccache.sh
+  - chmod +x .travis/send_binaries.sh
+  - chmod +x .travis/send_status.sh
+  - chmod +x .travis/upload_packagecloud.sh
+  - chmod +x ./debian/configure.sh
   - chmod +x ./src/autogen.sh
 
   - sudo apt-get update -qq
