@@ -27,8 +27,8 @@ before_install:
   - chmod +x .travis/send_binaries
   - chmod +x .travis/send_status
   - chmod +x .travis/upload_packagecloud
-  - chmod +x /debian/configure
-  - chmod +x /src/autogen.sh
+  - chmod +x ./debian/configure
+  - chmod +x ./src/autogen.sh
 
   - sudo apt-get update -qq
   - sudo apt-get install -qq sshpass
